@@ -321,7 +321,7 @@ function setupRain() {
     ctx.clearRect(0, 0, rect.width, rect.height);
     if (weather !== "break") {
       const gale = weather === "gale";
-      ctx.strokeStyle = gale ? "rgba(28, 36, 40, 0.55)" : "rgba(36, 44, 48, 0.38)";
+      ctx.strokeStyle = gale ? "rgba(232, 240, 242, 0.72)" : "rgba(244, 248, 250, 0.5)";
       ctx.lineWidth = gale ? 1.4 : 1;
       const wind = gale ? 0.55 : 0.18;
       const speed = gale ? 1.15 : 0.62;

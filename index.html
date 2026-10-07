@@ -8,12 +8,12 @@
       name="description"
       content="Eli Roundy plays bluegrass and country from a porch in Ketchikan, Alaska. Listen to Wet Strings, sail the Inside Passage, and pick a string in open G."
     />
-    <meta name="theme-color" content="#f4ecd8" />
+    <meta name="theme-color" content="#1c3330" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,500;1,6..96,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,620;1,9..144,500;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,560&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
@@ -21,19 +21,10 @@
   <body data-weather="rain">
     <a class="skip" href="#music">Skip to the music</a>
     <div class="magazine">
-      <div class="issue">
-        <p class="issue-line">
-          <span>Vol. I, No. 1</span>
-          <span>Ketchikan, Alaska · 55°N</span>
-          <span>A sporting &amp; musical journal</span>
-        </p>
-        <h1 class="mast-title"><a href="#top">Eli Roundy</a></h1>
-        <p class="mast-sub">Bluegrass, country, and the weather along the Inside Passage</p>
-      </div>
     <header class="nav" id="nav">
       <a class="brand" href="#top">
         <span class="brand-mark" aria-hidden="true">ER</span>
-        <span class="brand-name">The Porch Journal</span>
+        <span class="brand-name">Eli Roundy</span>
       </a>
       <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
         Menu
@@ -50,29 +41,105 @@
 
     <main>
       <section class="hero" id="top">
-        <div class="wrap-wide hero-top">
-          <p class="edge-label">Cover · The First City</p>
-          <div class="hero-copy">
-            <p class="kicker">Cover story</p>
-            <p class="cover-hed">Songs from the wet edge of the map.</p>
-            <p class="lede">
-              A banjo, a creek under the boardwalk, and whatever the rain is doing to the roof.
-            </p>
+        <div class="hero-scene">
+          <svg class="scene" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop class="sky-a" offset="0%" stop-color="#6d8886" />
+                <stop class="sky-b" offset="58%" stop-color="#b4c2b8" />
+                <stop class="sky-c" offset="100%" stop-color="#d7e0d6" />
+              </linearGradient>
+              <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop class="water-a" offset="0%" stop-color="#4a686c" />
+                <stop class="water-b" offset="100%" stop-color="#173033" />
+              </linearGradient>
+              <symbol id="fir" viewBox="0 0 30 70">
+                <path d="M15 0 L27 24 H21 L29 44 H18 V70 H12 V44 H1 L9 24 H3 Z" />
+              </symbol>
+            </defs>
+            <rect width="1440" height="900" fill="url(#skyGrad)" />
+            <path class="mist" d="M0 250 C220 220 340 160 520 190 C740 226 860 150 1080 176 C1240 196 1340 160 1440 184 V320 C1280 280 1100 250 900 270 C680 292 480 250 260 286 C140 306 40 280 0 300 Z" />
+            <path class="far" d="M0 360 C140 330 220 210 400 236 C560 258 640 168 830 186 C1010 204 1100 140 1260 178 C1360 198 1410 170 1440 184 V900 H0 Z" />
+            <path class="ridge" d="M0 470 C160 440 250 300 460 318 C640 334 720 230 900 236 C1100 244 1180 340 1340 368 C1400 378 1440 360 1440 360 V900 H0 Z" />
+            <g class="trees">
+              <use href="#fir" x="70" y="300" width="36" height="84" />
+              <use href="#fir" x="118" y="318" width="26" height="60" />
+              <use href="#fir" x="210" y="286" width="42" height="98" />
+              <use href="#fir" x="268" y="320" width="22" height="52" />
+              <use href="#fir" x="520" y="250" width="34" height="80" />
+              <use href="#fir" x="570" y="272" width="24" height="56" />
+              <use href="#fir" x="860" y="246" width="40" height="92" />
+              <use href="#fir" x="918" y="278" width="22" height="50" />
+              <use href="#fir" x="1120" y="300" width="32" height="74" />
+              <use href="#fir" x="1180" y="328" width="20" height="48" />
+              <use href="#fir" x="1320" y="310" width="30" height="70" />
+            </g>
+            <path class="near" d="M0 620 L90 560 L170 600 L280 520 L390 590 L520 500 L660 590 L790 530 L930 610 L1060 540 L1200 600 L1320 555 L1440 590 V900 H0 Z" />
+            <g class="trees near-trees">
+              <use href="#fir" x="40" y="500" width="48" height="112" />
+              <use href="#fir" x="100" y="530" width="30" height="70" />
+              <use href="#fir" x="300" y="470" width="54" height="124" />
+              <use href="#fir" x="370" y="520" width="28" height="64" />
+              <use href="#fir" x="560" y="455" width="50" height="116" />
+              <use href="#fir" x="800" y="490" width="36" height="84" />
+              <use href="#fir" x="1040" y="500" width="46" height="108" />
+              <use href="#fir" x="1240" y="510" width="32" height="74" />
+              <use href="#fir" x="1340" y="530" width="40" height="92" />
+            </g>
+            <g class="town">
+              <path d="M80 600 H150 L115 572 Z" />
+              <rect x="88" y="600" width="54" height="36" />
+              <path d="M168 612 H250 L209 578 Z" />
+              <rect x="176" y="612" width="66" height="40" />
+              <rect x="196" y="592" width="10" height="22" />
+              <path d="M270 618 H330 L300 594 Z" />
+              <rect x="276" y="618" width="48" height="28" />
+            </g>
+            <path class="water" d="M0 690 C240 652 420 730 700 692 C980 654 1180 736 1440 688 V900 H0 Z" />
+            <path class="wake" d="M0 760 C260 742 480 790 760 756 C1040 722 1220 786 1440 748 V900 H0 Z" />
+            <g class="boardwalk">
+              <rect x="0" y="668" width="520" height="8" />
+              <rect x="28" y="676" width="6" height="48" />
+              <rect x="92" y="676" width="6" height="62" />
+              <rect x="160" y="676" width="6" height="44" />
+              <rect x="230" y="676" width="6" height="70" />
+              <rect x="300" y="676" width="6" height="52" />
+              <rect x="370" y="676" width="6" height="66" />
+              <rect x="440" y="676" width="6" height="46" />
+            </g>
+            <g class="boat" transform="translate(780 688)">
+              <path d="M8 34 L28 50 L196 50 L220 34 L186 24 L36 24 Z" />
+              <rect x="86" y="8" width="52" height="18" fill="#f3eee4" />
+              <rect x="108" y="-18" width="3" height="28" />
+              <path d="M111 -14 L148 10 L111 10 Z" class="sail" />
+            </g>
+            <g class="plane">
+              <path d="M0 12 L46 12 L58 8 L46 6 L28 6 L22 0 L16 6 L8 6 Z" />
+            </g>
+            <text class="map-label" x="980" y="250">Deer Mountain</text>
+          </svg>
+          <div class="sunshaft" aria-hidden="true"></div>
+          <canvas id="rain" aria-hidden="true"></canvas>
+          <button class="salmon-btn" id="salmon" type="button" title="The creek's got opinions" aria-label="Send a salmon up the creek">
+            <svg viewBox="0 0 86 36" aria-hidden="true">
+              <ellipse cx="38" cy="18" rx="24" ry="10" fill="#e07a5f" />
+              <path d="M60 18 L82 6 L74 18 L82 30 Z" fill="#9c4030" />
+              <path d="M28 18 Q40 11 54 18" fill="none" stroke="#6d2c1c" stroke-width="1.4" />
+              <circle cx="22" cy="16" r="1.6" fill="#1c1612" />
+            </svg>
+          </button>
+          <div class="cover-plate">
+            <p class="issue-line">Vol. I · Ketchikan, Alaska · Bluegrass &amp; country</p>
+            <h1><a href="#top">Eli Roundy</a></h1>
+            <p class="lede">Songs from the wet edge of the map. A banjo, a creek under the boardwalk, and whatever the rain is doing to the roof.</p>
             <div class="hero-actions">
               <a class="btn btn-ink" href="#music">Listen</a>
               <a class="btn btn-ghost" href="#porch">Sit in on the porch</a>
             </div>
             <div class="weather" role="radiogroup" aria-label="Weather over the harbor">
-              <span class="weather-label">Conditions</span>
-              <button class="weather-btn" type="button" role="radio" data-weather="rain" aria-checked="true">
-                Rain
-              </button>
-              <button class="weather-btn" type="button" role="radio" data-weather="gale" aria-checked="false">
-                Gale
-              </button>
-              <button class="weather-btn" type="button" role="radio" data-weather="break" aria-checked="false">
-                Break
-              </button>
+              <button class="weather-btn" type="button" role="radio" data-weather="rain" aria-checked="true">Rain</button>
+              <button class="weather-btn" type="button" role="radio" data-weather="gale" aria-checked="false">Gale</button>
+              <button class="weather-btn" type="button" role="radio" data-weather="break" aria-checked="false">Break</button>
             </div>
           </div>
           <button class="turntable" id="turntable" type="button" aria-label="Play Creek Street Rain">
@@ -92,79 +159,6 @@
             </span>
           </button>
         </div>
-
-        <figure class="plate">
-        <div class="hero-scene">
-          <svg class="scene" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-            <rect class="sky" width="1440" height="480" />
-            <path
-              class="far"
-              d="M0 230 C180 200 260 150 390 176 C540 206 600 128 760 150 C930 174 1000 120 1140 156 C1280 190 1360 150 1440 170 L1440 480 L0 480 Z"
-            />
-            <path
-              class="ridge"
-              d="M0 300 C150 280 250 190 400 214 C560 240 620 150 780 146 C960 142 1040 230 1200 246 C1320 258 1380 220 1440 236 L1440 480 L0 480 Z"
-            />
-            <g class="trees" fill="#142824">
-              <path d="M250 250 l18 52 h-36 z" />
-              <path d="M300 236 l22 66 h-44 z" />
-              <path d="M470 268 l16 46 h-32 z" />
-              <path d="M860 250 l20 58 h-40 z" />
-              <path d="M910 262 l14 40 h-28 z" />
-              <path d="M1080 270 l18 48 h-36 z" />
-              <path d="M70 300 l16 44 h-32 z" />
-              <path d="M1260 276 l18 50 h-36 z" />
-            </g>
-            <path
-              class="near"
-              d="M0 360 L90 312 L150 348 L230 286 L310 340 L410 268 L500 338 L590 300 L690 352 L800 286 L910 344 L1020 300 L1140 356 L1260 312 L1360 350 L1440 318 L1440 480 L0 480 Z"
-            />
-            <path class="water" d="M0 404 C240 388 420 422 680 400 C960 376 1200 418 1440 392 L1440 480 L0 480 Z" />
-            <g class="boardwalk">
-              <rect x="0" y="392" width="1440" height="7" />
-              <rect x="36" y="399" width="5" height="46" />
-              <rect x="120" y="399" width="5" height="52" />
-              <rect x="210" y="399" width="5" height="44" />
-              <rect x="300" y="399" width="5" height="56" />
-              <rect x="390" y="399" width="5" height="48" />
-              <rect x="480" y="399" width="5" height="58" />
-              <rect x="570" y="399" width="5" height="46" />
-              <rect x="660" y="399" width="5" height="54" />
-              <rect x="760" y="399" width="5" height="42" />
-              <rect x="860" y="399" width="5" height="56" />
-              <rect x="960" y="399" width="5" height="48" />
-              <rect x="1060" y="399" width="5" height="58" />
-              <rect x="1160" y="399" width="5" height="44" />
-              <rect x="1260" y="399" width="5" height="52" />
-              <rect x="1360" y="399" width="5" height="46" />
-            </g>
-            <g class="boat" transform="translate(620 368)">
-              <path d="M0 22 L18 32 L128 32 L148 22 L126 16 L22 16 Z" />
-              <rect x="70" y="2" width="3" height="18" />
-              <path d="M73 4 L108 16 L73 16 Z" class="sail" />
-            </g>
-            <g class="plane">
-              <path d="M0 10 L34 10 L44 7 L34 5 L22 5 L18 0 L14 5 L6 5 Z" />
-            </g>
-            <text class="map-label" x="742" y="138">Deer Mtn</text>
-            <text class="map-label" x="80" y="210">Tongass</text>
-            <text class="map-label" x="80" y="386">Creek St</text>
-          </svg>
-          <div class="sunshaft" aria-hidden="true"></div>
-          <canvas id="rain" aria-hidden="true"></canvas>
-          <button class="salmon-btn" id="salmon" type="button" title="The creek's got opinions" aria-label="Send a salmon up the creek">
-            <svg viewBox="0 0 86 36" aria-hidden="true">
-              <ellipse cx="38" cy="18" rx="24" ry="10" fill="#e07a5f" />
-              <path d="M60 18 L82 6 L74 18 L82 30 Z" fill="#9c4030" />
-              <path d="M28 18 Q40 11 54 18" fill="none" stroke="#6d2c1c" stroke-width="1.4" />
-              <circle cx="22" cy="16" r="1.6" fill="#1c1612" />
-            </svg>
-          </button>
-        </div>
-          <figcaption class="plate-caption">
-            <span>Plate I.</span> Deer Mountain from the boardwalk, in the prevailing weather. The salmon will jump if the creek looks quiet.
-          </figcaption>
-        </figure>
       </section>
 
       <section class="stats" aria-label="In this number">
@@ -207,7 +201,7 @@
       <section class="band music" id="music">
         <div class="wrap">
           <header class="section-head">
-            <p class="kicker">Department — The Record</p>
+            <p class="kicker">The Record</p>
             <h2>Wet Strings</h2>
             <p class="deck">
               Six songs for a town that keeps its boots wet. Press play and a little string band tunes up in your browser — a porch session, not a studio master. The rain was already in the arrangement.
@@ -287,7 +281,7 @@ and let the whole street do the humming.</blockquote>
       <section class="band passage" id="passage">
         <div class="wrap">
           <header class="section-head">
-            <p class="kicker">Department — The Channel</p>
+            <p class="kicker">The Channel</p>
             <h2>Inside Passage</h2>
             <p class="deck">
               Drag the chart, pick a port, or run north with the tide. The boat always knows the way back to Ketchikan.
@@ -295,21 +289,19 @@ and let the whole street do the humming.</blockquote>
           </header>
           <div class="chart-wrap">
             <svg id="passage-chart" viewBox="0 0 1000 300" preserveAspectRatio="none" role="slider" tabindex="0" aria-label="Course along the Inside Passage" aria-valuemin="0" aria-valuemax="100" aria-valuenow="2">
-              <rect width="1000" height="300" fill="#efe4c6" />
+              <rect width="1000" height="300" fill="#102220" />
               <pattern id="chart-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M40 0 H0 V40" fill="none" stroke="rgba(60,42,24,0.16)" stroke-width="1" />
+                <path d="M40 0 H0 V40" fill="none" stroke="rgba(215,181,106,0.13)" stroke-width="1" />
               </pattern>
               <rect width="1000" height="300" fill="url(#chart-grid)" />
-              <text class="chart-north" x="36" y="36">N</text>
-              <ellipse cx="160" cy="52" rx="86" ry="28" class="island" />
-              <ellipse cx="455" cy="248" rx="120" ry="30" class="island" />
-              <ellipse cx="720" cy="48" rx="100" ry="26" class="island" />
-              <ellipse cx="910" cy="230" rx="72" ry="24" class="island" />
-              <path id="course" d="M28 188 C130 188 150 78 270 74 C400 70 430 176 545 172 C680 168 700 64 820 70 C920 76 940 150 978 138" fill="none" stroke="#8d2b22" stroke-width="2.2" stroke-dasharray="1 7" stroke-linecap="round" />
+              <path class="shore" d="M0 0 H1000 V36 C900 58 780 18 640 42 C500 66 380 22 240 48 C140 64 60 40 0 58 Z" />
+              <path class="shore" d="M0 300 H1000 V248 C880 228 760 268 620 246 C470 222 340 270 200 248 C110 232 40 258 0 240 Z" />
+              <text class="chart-north" x="28" y="28">N</text>
+              <path id="course" d="M28 188 C130 188 150 78 270 74 C400 70 430 176 545 172 C680 168 700 64 820 70 C920 76 940 150 978 138" fill="none" stroke="#e4c27a" stroke-width="2.2" stroke-dasharray="1 7" stroke-linecap="round" />
               <g id="port-markers"></g>
               <g id="boat">
-                <path d="M-20 5 L14 5 L22 0 L14 -5 L-20 -5 L-26 -1 L-26 1 Z" fill="#24180f" />
-                <path d="M-4 -5 L-4 -16 L12 -6 L-4 -6 Z" fill="#8d2b22" />
+                <path d="M-20 5 L14 5 L22 0 L14 -5 L-20 -5 L-26 -1 L-26 1 Z" fill="#f4efe4" />
+                <path d="M-4 -5 L-4 -16 L12 -6 L-4 -6 Z" fill="#e4c27a" />
               </g>
             </svg>
           </div>
@@ -335,7 +327,7 @@ and let the whole street do the humming.</blockquote>
       <section class="band porch" id="porch">
         <div class="wrap">
           <header class="section-head">
-            <p class="kicker">Department — The Campfire</p>
+            <p class="kicker">The Campfire</p>
             <h2>Sit in.</h2>
             <p class="deck">
               Five strings, the way a banjo wakes up. Pluck one, strike a chord, or throw a forward roll. If a song is already going, play along.
@@ -385,7 +377,7 @@ and let the whole street do the humming.</blockquote>
       <section class="band about" id="about">
         <div class="wrap about-grid">
           <div>
-            <p class="kicker">Department — A Sketch</p>
+            <p class="kicker">A Sketch</p>
             <h2>A narrow town. A wide song.</h2>
             <div class="about-copy">
               <p>
@@ -434,7 +426,7 @@ and let the whole street do the humming.</blockquote>
       <section class="band shows" id="shows">
         <div class="wrap">
           <header class="section-head">
-            <p class="kicker">Department — Where to Go</p>
+            <p class="kicker">Where to Go</p>
             <h2>On the route.</h2>
             <p class="deck">
               From Creek Street up to Juneau for folk week, then south when the weather allows. Tap a ticket to ask after a chair.
@@ -506,7 +498,7 @@ and let the whole street do the humming.</blockquote>
       <section class="band booking" id="booking">
         <div class="wrap booking-grid">
           <header class="section-head">
-            <p class="kicker">Department — Correspondence</p>
+            <p class="kicker">Correspondence</p>
             <h2>Write from wherever you're dry.</h2>
             <p class="deck">
               Shows, kitchens, dances, a radio hour. Say when and where. The note stays on this page until a real mailbox is wired up — copy it and send it on.
