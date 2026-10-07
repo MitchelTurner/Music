@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muskeg Road — Bluegrass &amp; Country from Southeast Alaska</title>
+<meta name="description" content="Banjo, fiddle and three-part harmony, written on the water between Ketchikan and the Inside Passage.">
+<meta property="og:title" content="Muskeg Road">
+<meta property="og:description" content="Bluegrass &amp; country from Southeast Alaska.">
+<meta property="og:image" content="/img/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg: #0F1E1A;
+    --surface: #172B25;
+    --line: #2B4339;
+    --line-strong: #4A5E55;
+    --text: #EDE6D6;
+    --text-soft: #C9CFC3;
+    --muted: #A9B3A6;
+    --glacier: #8FB8C9;
+    --accent: #E07A3F;      /* swap: #D9A441 gold, #C2563A rust */
+    --accent-soft: #F2A272;
+    --ink: #14110D;
+    --paper: #EDE6D6;
+    --display: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --sans: 'Work Sans', system-ui, sans-serif;
+    --wrap: 1240px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: var(--sans); font-size: 17px; line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: var(--text); }
+  a:hover { color: var(--accent-soft); }
+  :focus-visible { outline: 2px solid var(--accent-soft); outline-offset: 3px; }
+
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding-inline: 24px; }
+  .eyebrow {
+    margin: 0; font-size: 14px; font-weight: 600; letter-spacing: .22em;
+    text-transform: uppercase; color: var(--glacier);
+  }
+  .display {
+    margin: 0; font-family: var(--display); font-weight: 800;
+    line-height: .92; text-transform: uppercase;
+  }
+  .lede { font-family: var(--serif); color: var(--text-soft); }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px; min-height: 48px;
+    padding: 0 26px; border-radius: 999px; font-weight: 600;
+    text-decoration: none; border: 1.5px solid transparent; cursor: pointer;
+    font: inherit; font-weight: 600;
+  }
+  .btn-primary { background: var(--accent); color: var(--ink); }
+  .btn-primary:hover { background: var(--accent-soft); color: var(--ink); }
+  .btn-ghost { border-color: var(--line-strong); color: var(--text); background: transparent; }
+  .btn-ghost:hover { border-color: var(--text); color: var(--text); }
+  .pill {
+    display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px;
+    border-radius: 999px; border: 1.5px solid var(--line-strong);
+    text-decoration: none; font-weight: 500; font-size: 15px;
+  }
+  .placeholder {
+    background: var(--surface); border: 1px dashed var(--line-strong); border-radius: 12px;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    padding: 16px; color: var(--muted); font-size: 15px; overflow: hidden;
+  }
+  .placeholder img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* Header */
+  .site-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-block: 24px; }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo span { font-family: var(--display); font-weight: 800; font-size: 26px; letter-spacing: .06em; text-transform: uppercase; }
+  .nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 28px; font-size: 15px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; }
+  .nav a { text-decoration: none; padding: 10px 0; }
+  .nav .nav-cta { padding: 10px 18px; border: 1.5px solid var(--accent); border-radius: 999px; }
+
+  /* Hero */
+  .hero-grid { display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-end; justify-content: space-between; padding-top: 72px; }
+  .hero-copy { flex: 999 1 560px; min-width: 0; }
+  .hero h1 { font-size: clamp(64px, 11vw, 168px); line-height: .86; letter-spacing: -.01em; margin-top: 20px; }
+  .hero .lede { margin: 32px 0 0; max-width: 34ch; font-size: 22px; line-height: 1.5; }
+  .hero-actions { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 14px; }
+  .next-show { flex: 1 1 300px; max-width: 360px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+  .next-show .date { margin: 10px 0 0; font-family: var(--display); font-weight: 700; font-size: 40px; line-height: 1; }
+  .next-show p { margin: 6px 0 0; }
+  .arrow-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; min-height: 44px; font-weight: 600; text-decoration: none; color: var(--accent-soft); }
+  .ridge { display: block; width: 100%; height: 220px; margin-top: 64px; }
+
+  /* Music */
+  .music { padding-block: 72px 96px; }
+  .music-grid { display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start; }
+  .cover { flex: 1 1 360px; max-width: 480px; aspect-ratio: 1; }
+  .music-copy { flex: 999 1 480px; min-width: 0; }
+  .music h2 { font-size: clamp(48px, 6vw, 84px); margin-top: 12px; }
+  .music .lede { margin: 18px 0 0; max-width: 52ch; font-size: 19px; }
+  .tracks { list-style: none; margin: 32px 0 0; padding: 0; border-top: 1px solid var(--line); }
+  .tracks li { display: flex; align-items: center; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .play { flex: none; width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid var(--line-strong); background: transparent; color: var(--text); display: flex; align-items: center; justify-content: center; cursor: pointer; }
+  .play:hover, .play[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--ink); }
+  .track-num { font-family: var(--display); font-weight: 700; font-size: 18px; color: var(--glacier); width: 28px; }
+  .track-title { flex: 1; min-width: 0; font-weight: 500; }
+  .track-len { font-size: 15px; color: var(--muted); }
+  .platforms { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px; }
+
+  /* Shows */
+  .shows { background: var(--paper); color: var(--ink); }
+  .shows a { color: var(--ink); }
+  .shows .inner { padding-block: 96px; }
+  .section-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px; }
+  .shows h2 { font-size: clamp(48px, 7vw, 104px); line-height: .9; }
+  .shows .lede { margin: 0; max-width: 36ch; font-size: 18px; color: #3E4A44; }
+  .show-list { list-style: none; margin: 48px 0 0; padding: 0; border-top: 2px solid var(--ink); }
+  .show-list li { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px; padding: 22px 0; border-bottom: 1px solid #B9B09C; }
+  .show-date { flex: 0 0 150px; font-family: var(--display); font-weight: 800; font-size: 30px; line-height: 1; text-transform: uppercase; }
+  .show-where { flex: 1 1 260px; min-width: 0; }
+  .show-where strong { display: block; font-size: 19px; font-weight: 600; }
+  .show-where span { display: block; color: #4A544F; font-size: 15px; }
+  .show-access { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #3B5A6A; }
+  .shows .btn-ticket { background: var(--ink); color: var(--paper); min-height: 44px; padding: 0 22px; font-size: 15px; }
+  .shows .btn-ticket:hover { background: #2A2620; color: var(--paper); }
+  .shows-foot { margin: 28px 0 0; font-size: 15px; color: #4A544F; }
+
+  /* Story */
+  .story { padding-block: 112px; }
+  .story-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 56px; align-items: center; }
+  .photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .photo-grid .wide { grid-column: span 2; aspect-ratio: 16 / 10; }
+  .photo-grid .sq { aspect-ratio: 1; font-size: 14px; }
+  .story h2 { font-size: clamp(44px, 5.5vw, 76px); margin-top: 12px; }
+  .story .body p { font-family: var(--serif); font-size: 20px; line-height: 1.6; color: #D6D9CF; margin: 18px 0 0; }
+  .members { margin: 36px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 32px; }
+  .members div { border-top: 1px solid var(--line); padding-top: 12px; }
+  .members dt { font-weight: 600; }
+  .members dd { margin: 2px 0 0; color: var(--muted); font-size: 15px; }
+
+  /* Merch */
+  .merch { background: var(--surface); border-block: 1px solid var(--line); }
+  .merch .inner { padding-block: 96px; }
+  .merch h2 { font-size: clamp(44px, 6vw, 84px); }
+  .merch-grid { margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 24px; }
+  .merch-item { text-decoration: none; display: block; }
+  .merch-item .placeholder { aspect-ratio: 4 / 5; background: var(--bg); font-size: 14px; }
+  .merch-item p { margin: 14px 0 0; font-weight: 600; }
+  .merch-item .price { margin-top: 2px; color: var(--muted); font-weight: 400; font-size: 15px; }
+
+  /* Newsletter */
+  .newsletter { padding-block: 96px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: space-between; }
+  .newsletter > div { flex: 1 1 420px; min-width: 0; }
+  .newsletter h2 { font-size: clamp(40px, 5vw, 64px); }
+  .newsletter .lede { margin: 16px 0 0; max-width: 42ch; font-size: 19px; }
+  .nl-form { flex: 1 1 420px; display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; }
+  .nl-field { flex: 1 1 240px; display: flex; flex-direction: column; gap: 8px; }
+  .nl-field label { font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .nl-field input { min-height: 52px; padding: 0 18px; border-radius: 999px; border: 1.5px solid var(--line-strong); background: var(--bg); color: var(--text); font: inherit; }
+  .nl-form .btn { min-height: 52px; padding: 0 28px; }
+  .nl-msg { flex-basis: 100%; margin: 0; font-size: 15px; color: var(--glacier); min-height: 1.5em; }
+
+  /* Booking + footer */
+  .booking { border-top: 1px solid var(--line); }
+  .booking-grid { padding-block: 96px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 40px; }
+  .booking h2 { grid-column: 1 / -1; font-size: clamp(56px, 9vw, 140px); line-height: .85; }
+  .booking .label { margin: 0; font-size: 13px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--glacier); }
+  .booking .val { margin: 8px 0 0; font-size: 19px; }
+  .site-footer { border-top: 1px solid var(--line); }
+  .site-footer .wrap { padding-block: 32px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; font-size: 14px; color: var(--muted); }
+  .site-footer nav { display: flex; flex-wrap: wrap; gap: 20px; }
+  .site-footer a { text-decoration: none; padding: 10px 0; }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="wrap site-header">
+  <a class="logo" href="#top" aria-label="Muskeg Road home">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M2 30 L12 14 L18 22 L24 10 L34 30 Z"/><path d="M24 10 L27 15 L21 15 Z" fill="currentColor"/></svg>
+    <span>Muskeg Road</span>
+  </a>
+  <nav class="nav" aria-label="Main">
+    <a href="#music">Music</a>
+    <a href="#shows">Shows</a>
+    <a href="#story">Story</a>
+    <a href="#merch">Merch</a>
+    <a class="nav-cta" href="#booking">Booking</a>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="top" class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Bluegrass &amp; country from Southeast Alaska</p>
+        <h1 class="display">Songs from<br>the end of<br>the road</h1>
+        <p class="lede">Banjo, fiddle and three-part harmony, written on the water between Ketchikan and the Inside Passage.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#music">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg>
+            Listen to the new record
+          </a>
+          <a class="btn btn-ghost" href="#shows">See tour dates</a>
+        </div>
+      </div>
+      <aside class="next-show" aria-label="Next show">
+        <p class="eyebrow" style="font-size:13px;letter-spacing:.18em">Next show</p>
+        <p class="date">[DATE]</p>
+        <p>[VENUE] · Ketchikan, AK</p>
+        <a class="arrow-link" href="#shows">Get tickets
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </aside>
+    </div>
+    <svg class="ridge" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 170 L120 110 L210 150 L330 60 L420 120 L520 80 L640 140 L760 40 L880 120 L990 90 L1100 150 L1220 70 L1330 130 L1440 100 L1440 260 L0 260 Z" fill="#1B332C"/>
+      <path d="M0 210 L80 180 L160 200 L260 160 L360 196 L470 170 L600 205 L720 172 L860 200 L980 168 L1110 198 L1240 176 L1340 196 L1440 182 L1440 260 L0 260 Z" fill="#14271F"/>
+      <g fill="#0F1E1A">
+        <path d="M60 260 L76 196 L92 260 Z"/><path d="M100 260 L120 176 L140 260 Z"/><path d="M150 260 L164 212 L178 260 Z"/>
+        <path d="M300 260 L318 188 L336 260 Z"/><path d="M340 260 L354 214 L368 260 Z"/>
+        <path d="M560 260 L582 170 L604 260 Z"/><path d="M610 260 L626 204 L642 260 Z"/><path d="M650 260 L666 190 L682 260 Z"/>
+        <path d="M900 260 L916 200 L932 260 Z"/><path d="M940 260 L962 172 L984 260 Z"/>
+        <path d="M1180 260 L1198 192 L1216 260 Z"/><path d="M1222 260 L1240 178 L1258 260 Z"/><path d="M1266 260 L1280 214 L1294 260 Z"/>
+        <path d="M1370 260 L1388 186 L1406 260 Z"/>
+      </g>
+      <path d="M0 244 Q 360 232 720 244 T 1440 244 L1440 260 L0 260 Z" fill="#0F1E1A"/>
+    </svg>
+  </section>
+
+  <!-- MUSIC -->
+  <section id="music" class="wrap music">
+    <div class="music-grid">
+      <div class="placeholder cover">
+        <!-- <img src="/img/album-cover.jpg" alt="[Album title] cover art"> -->
+        [ALBUM ARTWORK — 3000 × 3000]
+      </div>
+      <div class="music-copy">
+        <p class="eyebrow">New record · Out now</p>
+        <h2 class="display">[ALBUM TITLE]</h2>
+        <p class="lede">[One or two sentences about the record — where it was cut, who played on it, what it's about.]</p>
+        <!-- Set data-src on each button to an MP3 preview to make it play -->
+        <ol class="tracks">
+          <li><button class="play" type="button" aria-label="Play track 1" aria-pressed="false" data-src=""><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg></button><span class="track-num">01</span><span class="track-title">[Track title]</span><span class="track-len">0:00</span></li>
+          <li><button class="play" type="button" aria-label="Play track 2" aria-pressed="false" data-src=""><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg></button><span class="track-num">02</span><span class="track-title">[Track title]</span><span class="track-len">0:00</span></li>
+          <li><button class="play" type="button" aria-label="Play track 3" aria-pressed="false" data-src=""><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg></button><span class="track-num">03</span><span class="track-title">[Track title]</span><span class="track-len">0:00</span></li>
+          <li><button class="play" type="button" aria-label="Play track 4" aria-pressed="false" data-src=""><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg></button><span class="track-num">04</span><span class="track-title">[Track title]</span><span class="track-len">0:00</span></li>
+          <li><button class="play" type="button" aria-label="Play track 5" aria-pressed="false" data-src=""><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg></button><span class="track-num">05</span><span class="track-title">[Track title]</span><span class="track-len">0:00</span></li>
+          <li><button class="play" type="button" aria-label="Play track 6" aria-pressed="false" data-src=""><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg></button><span class="track-num">06</span><span class="track-title">[Track title]</span><span class="track-len">0:00</span></li>
+        </ol>
+        <div class="platforms">
+          <a class="pill" href="#">Spotify</a>
+          <a class="pill" href="#">Apple Music</a>
+          <a class="pill" href="#">Bandcamp</a>
+          <a class="pill" href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWS -->
+  <section id="shows" class="shows">
+    <div class="wrap inner">
+      <div class="section-head">
+        <h2 class="display">On the road<br>&amp; on the ferry</h2>
+        <p class="lede">Festivals, harbor bars and community halls up and down the Panhandle. Some towns you can only reach by boat or float plane.</p>
+      </div>
+      <ul class="show-list">
+        <li><span class="show-date">[DATE]</span><span class="show-where"><strong>[VENUE]</strong><span>Ketchikan, AK</span></span><span class="show-access">Road</span><a class="btn btn-ticket" href="#">Tickets</a></li>
+        <li><span class="show-date">[DATE]</span><span class="show-where"><strong>[VENUE]</strong><span>Wrangell, AK</span></span><span class="show-access">Ferry</span><a class="btn btn-ticket" href="#">Tickets</a></li>
+        <li><span class="show-date">[DATE]</span><span class="show-where"><strong>[VENUE]</strong><span>Petersburg, AK</span></span><span class="show-access">Ferry</span><a class="btn btn-ticket" href="#">Tickets</a></li>
+        <li><span class="show-date">[DATE]</span><span class="show-where"><strong>[VENUE]</strong><span>Juneau, AK</span></span><span class="show-access">Ferry</span><a class="btn btn-ticket" href="#">Tickets</a></li>
+        <li><span class="show-date">[DATE]</span><span class="show-where"><strong>[VENUE]</strong><span>Sitka, AK</span></span><span class="show-access">Ferry</span><a class="btn btn-ticket" href="#">Tickets</a></li>
+      </ul>
+      <p class="shows-foot">Want us in your town, lodge or boat harbor? <a href="#booking"><strong>Book the band →</strong></a></p>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="story" class="wrap story">
+    <div class="story-grid">
+      <div class="photo-grid">
+        <div class="placeholder wide">[BAND PHOTO — on the dock or in the rain forest]</div>
+        <div class="placeholder sq">[LIVE SHOT]</div>
+        <div class="placeholder sq">[INSTRUMENT DETAIL]</div>
+      </div>
+      <div class="body">
+        <p class="eyebrow" style="font-family:var(--sans);font-size:14px;color:var(--glacier);margin:0">The story</p>
+        <h2 class="display">Raised on rain<br>and old records</h2>
+        <p style="margin-top:24px">[Band bio — who they are, how they met, where they play. Two or three short paragraphs reads best here.]</p>
+        <p>[Second paragraph — influences, fishing seasons, the town that shaped the sound.]</p>
+        <dl class="members">
+          <div><dt>[Name]</dt><dd>Banjo, vocals</dd></div>
+          <div><dt>[Name]</dt><dd>Fiddle</dd></div>
+          <div><dt>[Name]</dt><dd>Guitar, lead vocals</dd></div>
+          <div><dt>[Name]</dt><dd>Upright bass</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- MERCH -->
+  <section id="merch" class="merch">
+    <div class="wrap inner">
+      <div class="section-head">
+        <h2 class="display">Merch table</h2>
+        <a class="arrow-link" href="#" style="margin:0">Shop everything →</a>
+      </div>
+      <div class="merch-grid">
+        <a class="merch-item" href="#"><div class="placeholder">[PRODUCT PHOTO]</div><p>[Album] on vinyl</p><p class="price">[PRICE]</p></a>
+        <a class="merch-item" href="#"><div class="placeholder">[PRODUCT PHOTO]</div><p>Logo tee</p><p class="price">[PRICE]</p></a>
+        <a class="merch-item" href="#"><div class="placeholder">[PRODUCT PHOTO]</div><p>Rain-country trucker hat</p><p class="price">[PRICE]</p></a>
+        <a class="merch-item" href="#"><div class="placeholder">[PRODUCT PHOTO]</div><p>Enamel pin</p><p class="price">[PRICE]</p></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="wrap newsletter">
+    <div>
+      <h2 class="display">Letters from<br>the harbor</h2>
+      <p class="lede">New songs, show announcements and the occasional fish story. A few emails a year, never more.</p>
+    </div>
+    <!-- Point action at your list provider (Mailchimp, Buttondown, ConvertKit, etc.) -->
+    <form class="nl-form" action="" method="post" id="nl-form">
+      <div class="nl-field">
+        <label for="nl-email">Email address</label>
+        <input id="nl-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+      </div>
+      <button class="btn btn-primary" type="submit">Sign up</button>
+      <p class="nl-msg" id="nl-msg" role="status"></p>
+    </form>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking" class="booking">
+    <div class="wrap booking-grid">
+      <h2 class="display">Book the band</h2>
+      <div>
+        <p class="label">Booking</p>
+        <p class="val">[BOOKING CONTACT]</p>
+        <a href="mailto:booking@example.com">booking@example.com</a>
+      </div>
+      <div>
+        <p class="label">Press</p>
+        <p class="val">Photos, bio &amp; stage plot</p>
+        <a href="/press-kit.pdf">Download press kit</a>
+      </div>
+      <div>
+        <p class="label">Good fits</p>
+        <p class="val" style="font-size:17px;color:var(--text-soft)">Festivals, weddings, lodges, private charters, community halls and fundraisers.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Muskeg Road · Ketchikan, Alaska</span>
+    <nav aria-label="Social">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">YouTube</a>
+      <a href="#">Bandcamp</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // Track previews: one audio element, toggles per button
+  (function () {
+    const audio = new Audio();
+    let current = null;
+    const reset = (b) => { if (b) b.setAttribute('aria-pressed', 'false'); };
+    document.querySelectorAll('.play').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const src = btn.dataset.src;
+        if (!src) return;
+        if (current === btn && !audio.paused) { audio.pause(); reset(btn); return; }
+        reset(current);
+        if (audio.src !== new URL(src, location.href).href) audio.src = src;
+        audio.play();
+        btn.setAttribute('aria-pressed', 'true');
+        current = btn;
+      });
+    });
+    audio.addEventListener('ended', () => reset(current));
+  })();
+
+  // Newsletter: placeholder handler until a provider is wired up
+  document.getElementById('nl-form').addEventListener('submit', (e) => {
+    if (e.target.getAttribute('action')) return;
+    e.preventDefault();
+    document.getElementById('nl-msg').textContent = 'Thanks — you’re on the list.';
+    e.target.reset();
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
