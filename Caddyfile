@@ -1,0 +1,29 @@
+{
+	admin off
+	persist_config off
+	auto_https off
+}
+
+:{$PORT:80} {
+	log {
+		format json
+	}
+
+	respond /health 200
+
+	root * public
+
+	encode gzip zstd
+
+	try_files {path} {path}.html {path}/index.html
+
+	file_server {
+		hide .git
+		hide .env*
+	}
+
+	handle_errors {
+		rewrite * /404.html
+		file_server
+	}
+}
