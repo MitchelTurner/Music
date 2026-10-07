@@ -3,57 +3,67 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Eli Roundy — Bluegrass &amp; Country from Ketchikan</title>
+    <title>Eli Roundy — A Journal from Ketchikan</title>
     <meta
       name="description"
       content="Eli Roundy plays bluegrass and country from a porch in Ketchikan, Alaska. Listen to Wet Strings, sail the Inside Passage, and pick a string in open G."
     />
-    <meta name="theme-color" content="#efe6d6" />
+    <meta name="theme-color" content="#f4ecd8" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Outfit:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,500;1,6..96,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body data-weather="rain">
     <a class="skip" href="#music">Skip to the music</a>
+    <div class="magazine">
+      <div class="issue">
+        <p class="issue-line">
+          <span>Vol. I, No. 1</span>
+          <span>Ketchikan, Alaska · 55°N</span>
+          <span>A sporting &amp; musical journal</span>
+        </p>
+        <h1 class="mast-title"><a href="#top">Eli Roundy</a></h1>
+        <p class="mast-sub">Bluegrass, country, and the weather along the Inside Passage</p>
+      </div>
     <header class="nav" id="nav">
       <a class="brand" href="#top">
         <span class="brand-mark" aria-hidden="true">ER</span>
-        <span class="brand-name">Eli Roundy</span>
+        <span class="brand-name">The Porch Journal</span>
       </a>
       <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
         Menu
       </button>
       <nav class="nav-menu" id="nav-menu" aria-label="Primary">
-        <a href="#music">Music</a>
-        <a href="#passage">Passage</a>
-        <a href="#porch">The Porch</a>
-        <a href="#about">About</a>
-        <a href="#shows">Shows</a>
-        <a class="nav-book" href="#booking">Book a date</a>
+        <a href="#music">The Record</a>
+        <a href="#passage">The Channel</a>
+        <a href="#porch">Campfire</a>
+        <a href="#about">A Sketch</a>
+        <a href="#shows">Where to Go</a>
+        <a class="nav-book" href="#booking">Correspondence</a>
       </nav>
     </header>
 
     <main>
       <section class="hero" id="top">
         <div class="wrap-wide hero-top">
-          <p class="edge-label">Ketchikan · Alaska · 55°N</p>
+          <p class="edge-label">Cover · The First City</p>
           <div class="hero-copy">
-            <p class="kicker">Bluegrass &amp; country · The First City</p>
-            <h1>Eli <em>Roundy</em></h1>
+            <p class="kicker">Cover story</p>
+            <p class="cover-hed">Songs from the wet edge of the map.</p>
             <p class="lede">
-              Songs from the wet edge of the map. A banjo, a creek under the
-              boardwalk, and whatever the rain is doing to the roof.
+              A banjo, a creek under the boardwalk, and whatever the rain is doing to the roof.
             </p>
             <div class="hero-actions">
               <a class="btn btn-ink" href="#music">Listen</a>
               <a class="btn btn-ghost" href="#porch">Sit in on the porch</a>
             </div>
             <div class="weather" role="radiogroup" aria-label="Weather over the harbor">
+              <span class="weather-label">Conditions</span>
               <button class="weather-btn" type="button" role="radio" data-weather="rain" aria-checked="true">
                 Rain
               </button>
@@ -83,6 +93,7 @@
           </button>
         </div>
 
+        <figure class="plate">
         <div class="hero-scene">
           <svg class="scene" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
             <rect class="sky" width="1440" height="480" />
@@ -149,18 +160,29 @@
               <circle cx="22" cy="16" r="1.6" fill="#1c1612" />
             </svg>
           </button>
-          <div class="marquee" aria-hidden="true">
-            <div class="marquee-track">
-              <p>Creek Street rain · Liquid sunshine · Deer Mountain hymn · Porch light left on · Salmon after dark · First City farewell · Open G · Ketchikan ·</p>
-              <p>Creek Street rain · Liquid sunshine · Deer Mountain hymn · Porch light left on · Salmon after dark · First City farewell · Open G · Ketchikan ·</p>
-            </div>
-          </div>
         </div>
+          <figcaption class="plate-caption">
+            <span>Plate I.</span> Deer Mountain from the boardwalk, in the prevailing weather. The salmon will jump if the creek looks quiet.
+          </figcaption>
+        </figure>
       </section>
 
-      <section class="stats" aria-label="Ketchikan in numbers">
-        <h2 class="visually-hidden">Ketchikan in numbers</h2>
-        <ul class="wrap">
+      <section class="stats" aria-label="In this number">
+        <div class="wrap contents">
+          <div>
+            <h2>In this number</h2>
+            <ol class="toc">
+              <li><a href="#music"><span>The Record</span> Wet Strings, six porch songs</a></li>
+              <li><a href="#passage"><span>The Channel</span> A chart of the Inside Passage</a></li>
+              <li><a href="#porch"><span>The Campfire</span> Open G, for anyone sitting in</a></li>
+              <li><a href="#about"><span>A Sketch</span> The player and the town</a></li>
+              <li><a href="#shows"><span>Where to Go</span> Dates along the coast</a></li>
+              <li><a href="#booking"><span>Correspondence</span> A note left on the porch</a></li>
+            </ol>
+          </div>
+          <div>
+            <h2>Field notes</h2>
+        <ul>
           <li>
             <strong>~150</strong>
             <span>inches of rain, most years</span>
@@ -178,12 +200,14 @@
             <span>a town on the Inside Passage</span>
           </li>
         </ul>
+          </div>
+        </div>
       </section>
 
       <section class="band music" id="music">
         <div class="wrap">
           <header class="section-head">
-            <p class="kicker">No. 01 — The record</p>
+            <p class="kicker">Department — The Record</p>
             <h2>Wet Strings</h2>
             <p class="deck">
               Six songs for a town that keeps its boots wet. Press play and a little string band tunes up in your browser — a porch session, not a studio master. The rain was already in the arrangement.
@@ -263,7 +287,7 @@ and let the whole street do the humming.</blockquote>
       <section class="band passage" id="passage">
         <div class="wrap">
           <header class="section-head">
-            <p class="kicker">No. 02 — The channel</p>
+            <p class="kicker">Department — The Channel</p>
             <h2>Inside Passage</h2>
             <p class="deck">
               Drag the chart, pick a port, or run north with the tide. The boat always knows the way back to Ketchikan.
@@ -271,20 +295,21 @@ and let the whole street do the humming.</blockquote>
           </header>
           <div class="chart-wrap">
             <svg id="passage-chart" viewBox="0 0 1000 300" preserveAspectRatio="none" role="slider" tabindex="0" aria-label="Course along the Inside Passage" aria-valuemin="0" aria-valuemax="100" aria-valuenow="2">
-              <rect width="1000" height="300" fill="#0c1918" />
+              <rect width="1000" height="300" fill="#efe4c6" />
               <pattern id="chart-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M40 0 H0 V40" fill="none" stroke="rgba(243,234,215,0.08)" stroke-width="1" />
+                <path d="M40 0 H0 V40" fill="none" stroke="rgba(60,42,24,0.16)" stroke-width="1" />
               </pattern>
               <rect width="1000" height="300" fill="url(#chart-grid)" />
+              <text class="chart-north" x="36" y="36">N</text>
               <ellipse cx="160" cy="52" rx="86" ry="28" class="island" />
               <ellipse cx="455" cy="248" rx="120" ry="30" class="island" />
               <ellipse cx="720" cy="48" rx="100" ry="26" class="island" />
               <ellipse cx="910" cy="230" rx="72" ry="24" class="island" />
-              <path id="course" d="M28 188 C130 188 150 78 270 74 C400 70 430 176 545 172 C680 168 700 64 820 70 C920 76 940 150 978 138" fill="none" stroke="#e7b15a" stroke-width="2.5" stroke-dasharray="2 8" stroke-linecap="round" />
+              <path id="course" d="M28 188 C130 188 150 78 270 74 C400 70 430 176 545 172 C680 168 700 64 820 70 C920 76 940 150 978 138" fill="none" stroke="#8d2b22" stroke-width="2.2" stroke-dasharray="1 7" stroke-linecap="round" />
               <g id="port-markers"></g>
               <g id="boat">
-                <path d="M-20 5 L14 5 L22 0 L14 -5 L-20 -5 L-26 -1 L-26 1 Z" fill="#f3ead7" />
-                <path d="M-4 -5 L-4 -16 L12 -6 L-4 -6 Z" fill="#e7b15a" />
+                <path d="M-20 5 L14 5 L22 0 L14 -5 L-20 -5 L-26 -1 L-26 1 Z" fill="#24180f" />
+                <path d="M-4 -5 L-4 -16 L12 -6 L-4 -6 Z" fill="#8d2b22" />
               </g>
             </svg>
           </div>
@@ -310,7 +335,7 @@ and let the whole street do the humming.</blockquote>
       <section class="band porch" id="porch">
         <div class="wrap">
           <header class="section-head">
-            <p class="kicker">No. 03 — Open G</p>
+            <p class="kicker">Department — The Campfire</p>
             <h2>Sit in.</h2>
             <p class="deck">
               Five strings, the way a banjo wakes up. Pluck one, strike a chord, or throw a forward roll. If a song is already going, play along.
@@ -360,7 +385,7 @@ and let the whole street do the humming.</blockquote>
       <section class="band about" id="about">
         <div class="wrap about-grid">
           <div>
-            <p class="kicker">No. 04 — The player</p>
+            <p class="kicker">Department — A Sketch</p>
             <h2>A narrow town. A wide song.</h2>
             <div class="about-copy">
               <p>
@@ -409,7 +434,7 @@ and let the whole street do the humming.</blockquote>
       <section class="band shows" id="shows">
         <div class="wrap">
           <header class="section-head">
-            <p class="kicker">No. 05 — The poster</p>
+            <p class="kicker">Department — Where to Go</p>
             <h2>On the route.</h2>
             <p class="deck">
               From Creek Street up to Juneau for folk week, then south when the weather allows. Tap a ticket to ask after a chair.
@@ -481,7 +506,7 @@ and let the whole street do the humming.</blockquote>
       <section class="band booking" id="booking">
         <div class="wrap booking-grid">
           <header class="section-head">
-            <p class="kicker">No. 06 — The note</p>
+            <p class="kicker">Department — Correspondence</p>
             <h2>Write from wherever you're dry.</h2>
             <p class="deck">
               Shows, kitchens, dances, a radio hour. Say when and where. The note stays on this page until a real mailbox is wired up — copy it and send it on.
@@ -550,6 +575,7 @@ and let the whole street do the humming.</blockquote>
         <p>© 2026 Roundy<br />Wet Strings · RR-001</p>
       </div>
     </footer>
+    </div>
 
     <div class="dock" role="region" aria-label="Porch player">
       <div class="dock-progress">
