@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eli Roundy — Bluegrass &amp; Country from Ketchikan</title>
+    <meta
+      name="description"
+      content="Eli Roundy plays bluegrass and country from a porch in Ketchikan, Alaska. Listen to Wet Strings, sail the Inside Passage, and pick a string in open G."
+    />
+    <meta name="theme-color" content="#efe6d6" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-weather="rain">
+    <a class="skip" href="#music">Skip to the music</a>
+    <header class="nav" id="nav">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">ER</span>
+        <span class="brand-name">Eli Roundy</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        Menu
+      </button>
+      <nav class="nav-menu" id="nav-menu" aria-label="Primary">
+        <a href="#music">Music</a>
+        <a href="#passage">Passage</a>
+        <a href="#porch">The Porch</a>
+        <a href="#about">About</a>
+        <a href="#shows">Shows</a>
+        <a class="nav-book" href="#booking">Book a date</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="wrap-wide hero-top">
+          <p class="edge-label">Ketchikan · Alaska · 55°N</p>
+          <div class="hero-copy">
+            <p class="kicker">Bluegrass &amp; country · The First City</p>
+            <h1>Eli <em>Roundy</em></h1>
+            <p class="lede">
+              Songs from the wet edge of the map. A banjo, a creek under the
+              boardwalk, and whatever the rain is doing to the roof.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-ink" href="#music">Listen</a>
+              <a class="btn btn-ghost" href="#porch">Sit in on the porch</a>
+            </div>
+            <div class="weather" role="radiogroup" aria-label="Weather over the harbor">
+              <button class="weather-btn" type="button" role="radio" data-weather="rain" aria-checked="true">
+                Rain
+              </button>
+              <button class="weather-btn" type="button" role="radio" data-weather="gale" aria-checked="false">
+                Gale
+              </button>
+              <button class="weather-btn" type="button" role="radio" data-weather="break" aria-checked="false">
+                Break
+              </button>
+            </div>
+          </div>
+          <button class="turntable" id="turntable" type="button" aria-label="Play Creek Street Rain">
+            <span class="platter">
+              <span class="vinyl">
+                <span class="label">
+                  <span class="label-kicker" id="label-kicker">Porch</span>
+                  <span class="label-title" id="label-title">Creek Street</span>
+                  <span class="label-cat">RR-001</span>
+                </span>
+              </span>
+            </span>
+            <span class="tonearm" aria-hidden="true">
+              <span class="pivot"></span>
+              <span class="arm"></span>
+              <span class="headshell"></span>
+            </span>
+          </button>
+        </div>
+
+        <div class="hero-scene">
+          <svg class="scene" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+            <rect class="sky" width="1440" height="480" />
+            <path
+              class="far"
+              d="M0 230 C180 200 260 150 390 176 C540 206 600 128 760 150 C930 174 1000 120 1140 156 C1280 190 1360 150 1440 170 L1440 480 L0 480 Z"
+            />
+            <path
+              class="ridge"
+              d="M0 300 C150 280 250 190 400 214 C560 240 620 150 780 146 C960 142 1040 230 1200 246 C1320 258 1380 220 1440 236 L1440 480 L0 480 Z"
+            />
+            <g class="trees" fill="#142824">
+              <path d="M250 250 l18 52 h-36 z" />
+              <path d="M300 236 l22 66 h-44 z" />
+              <path d="M470 268 l16 46 h-32 z" />
+              <path d="M860 250 l20 58 h-40 z" />
+              <path d="M910 262 l14 40 h-28 z" />
+              <path d="M1080 270 l18 48 h-36 z" />
+              <path d="M70 300 l16 44 h-32 z" />
+              <path d="M1260 276 l18 50 h-36 z" />
+            </g>
+            <path
+              class="near"
+              d="M0 360 L90 312 L150 348 L230 286 L310 340 L410 268 L500 338 L590 300 L690 352 L800 286 L910 344 L1020 300 L1140 356 L1260 312 L1360 350 L1440 318 L1440 480 L0 480 Z"
+            />
+            <path class="water" d="M0 404 C240 388 420 422 680 400 C960 376 1200 418 1440 392 L1440 480 L0 480 Z" />
+            <g class="boardwalk">
+              <rect x="0" y="392" width="1440" height="7" />
+              <rect x="36" y="399" width="5" height="46" />
+              <rect x="120" y="399" width="5" height="52" />
+              <rect x="210" y="399" width="5" height="44" />
+              <rect x="300" y="399" width="5" height="56" />
+              <rect x="390" y="399" width="5" height="48" />
+              <rect x="480" y="399" width="5" height="58" />
+              <rect x="570" y="399" width="5" height="46" />
+              <rect x="660" y="399" width="5" height="54" />
+              <rect x="760" y="399" width="5" height="42" />
+              <rect x="860" y="399" width="5" height="56" />
+              <rect x="960" y="399" width="5" height="48" />
+              <rect x="1060" y="399" width="5" height="58" />
+              <rect x="1160" y="399" width="5" height="44" />
+              <rect x="1260" y="399" width="5" height="52" />
+              <rect x="1360" y="399" width="5" height="46" />
+            </g>
+            <g class="boat" transform="translate(620 368)">
+              <path d="M0 22 L18 32 L128 32 L148 22 L126 16 L22 16 Z" />
+              <rect x="70" y="2" width="3" height="18" />
+              <path d="M73 4 L108 16 L73 16 Z" class="sail" />
+            </g>
+            <g class="plane">
+              <path d="M0 10 L34 10 L44 7 L34 5 L22 5 L18 0 L14 5 L6 5 Z" />
+            </g>
+            <text class="map-label" x="742" y="138">Deer Mtn</text>
+            <text class="map-label" x="80" y="210">Tongass</text>
+            <text class="map-label" x="80" y="386">Creek St</text>
+          </svg>
+          <div class="sunshaft" aria-hidden="true"></div>
+          <canvas id="rain" aria-hidden="true"></canvas>
+          <button class="salmon-btn" id="salmon" type="button" title="The creek's got opinions" aria-label="Send a salmon up the creek">
+            <svg viewBox="0 0 86 36" aria-hidden="true">
+              <ellipse cx="38" cy="18" rx="24" ry="10" fill="#e07a5f" />
+              <path d="M60 18 L82 6 L74 18 L82 30 Z" fill="#9c4030" />
+              <path d="M28 18 Q40 11 54 18" fill="none" stroke="#6d2c1c" stroke-width="1.4" />
+              <circle cx="22" cy="16" r="1.6" fill="#1c1612" />
+            </svg>
+          </button>
+          <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+              <p>Creek Street rain · Liquid sunshine · Deer Mountain hymn · Porch light left on · Salmon after dark · First City farewell · Open G · Ketchikan ·</p>
+              <p>Creek Street rain · Liquid sunshine · Deer Mountain hymn · Porch light left on · Salmon after dark · First City farewell · Open G · Ketchikan ·</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Ketchikan in numbers">
+        <h2 class="visually-hidden">Ketchikan in numbers</h2>
+        <ul class="wrap">
+          <li>
+            <strong>~150</strong>
+            <span>inches of rain, most years</span>
+          </li>
+          <li>
+            <strong>5</strong>
+            <span>strings on the banjo, open G</span>
+          </li>
+          <li>
+            <strong>1</strong>
+            <span>creek running under the street</span>
+          </li>
+          <li>
+            <strong>55°N</strong>
+            <span>a town on the Inside Passage</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="band music" id="music">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="kicker">No. 01 — The record</p>
+            <h2>Wet Strings</h2>
+            <p class="deck">
+              Six songs for a town that keeps its boots wet. Press play and a little string band tunes up in your browser — a porch session, not a studio master. The rain was already in the arrangement.
+            </p>
+          </header>
+          <div class="music-layout">
+            <div>
+              <ol class="tracklist" id="tracklist">
+                <li>
+                  <button class="track" type="button" data-song="creek">
+                    <span class="num">01</span>
+                    <span class="name">Creek Street Rain</span>
+                    <span class="time">—</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="track" type="button" data-song="sunshine">
+                    <span class="num">02</span>
+                    <span class="name">Liquid Sunshine</span>
+                    <span class="time">—</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="track" type="button" data-song="mountain">
+                    <span class="num">03</span>
+                    <span class="name">Deer Mountain Hymn</span>
+                    <span class="time">—</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="track" type="button" data-song="porch">
+                    <span class="num">04</span>
+                    <span class="name">Porch Light Left On</span>
+                    <span class="time">—</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="track" type="button" data-song="salmon">
+                    <span class="num">05</span>
+                    <span class="name">Salmon After Dark</span>
+                    <span class="time">—</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="track" type="button" data-song="farewell">
+                    <span class="num">06</span>
+                    <span class="name">First City Farewell</span>
+                    <span class="time">—</span>
+                  </button>
+                </li>
+              </ol>
+              <ul class="voices" aria-hidden="true">
+                <li data-voice="pluck">Banjo</li>
+                <li data-voice="fiddle">Fiddle</li>
+                <li data-voice="bass">Bass</li>
+                <li data-voice="chop">Mando</li>
+              </ul>
+            </div>
+            <figure class="lyrics">
+              <figcaption>
+                <span class="kicker" id="lyric-kicker">From the record</span>
+                <span class="lyric-title" id="lyric-title">Creek Street Rain</span>
+                <span class="lyric-blurb" id="lyric-blurb">The boardwalk keeps the beat. The creek plays the rest.</span>
+              </figcaption>
+              <blockquote id="lyrics">The boards remember every boot.
+The creek keeps talking underfoot.
+I tune to whatever the roof is drumming
+and let the whole street do the humming.</blockquote>
+            </figure>
+          </div>
+          <noscript>
+            <p>The porch player needs JavaScript. The six songs are Creek Street Rain, Liquid Sunshine, Deer Mountain Hymn, Porch Light Left On, Salmon After Dark, and First City Farewell.</p>
+          </noscript>
+        </div>
+      </section>
+
+      <section class="band passage" id="passage">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="kicker">No. 02 — The channel</p>
+            <h2>Inside Passage</h2>
+            <p class="deck">
+              Drag the chart, pick a port, or run north with the tide. The boat always knows the way back to Ketchikan.
+            </p>
+          </header>
+          <div class="chart-wrap">
+            <svg id="passage-chart" viewBox="0 0 1000 300" preserveAspectRatio="none" role="slider" tabindex="0" aria-label="Course along the Inside Passage" aria-valuemin="0" aria-valuemax="100" aria-valuenow="2">
+              <rect width="1000" height="300" fill="#0c1918" />
+              <pattern id="chart-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M40 0 H0 V40" fill="none" stroke="rgba(243,234,215,0.08)" stroke-width="1" />
+              </pattern>
+              <rect width="1000" height="300" fill="url(#chart-grid)" />
+              <ellipse cx="160" cy="52" rx="86" ry="28" class="island" />
+              <ellipse cx="455" cy="248" rx="120" ry="30" class="island" />
+              <ellipse cx="720" cy="48" rx="100" ry="26" class="island" />
+              <ellipse cx="910" cy="230" rx="72" ry="24" class="island" />
+              <path id="course" d="M28 188 C130 188 150 78 270 74 C400 70 430 176 545 172 C680 168 700 64 820 70 C920 76 940 150 978 138" fill="none" stroke="#e7b15a" stroke-width="2.5" stroke-dasharray="2 8" stroke-linecap="round" />
+              <g id="port-markers"></g>
+              <g id="boat">
+                <path d="M-20 5 L14 5 L22 0 L14 -5 L-20 -5 L-26 -1 L-26 1 Z" fill="#f3ead7" />
+                <path d="M-4 -5 L-4 -16 L12 -6 L-4 -6 Z" fill="#e7b15a" />
+              </g>
+            </svg>
+          </div>
+          <div class="port-nav" role="group" aria-label="Ports">
+            <button class="port-btn" type="button" data-port="ketchikan" aria-pressed="true">Ketchikan</button>
+            <button class="port-btn" type="button" data-port="wrangell" aria-pressed="false">Wrangell</button>
+            <button class="port-btn" type="button" data-port="petersburg" aria-pressed="false">Petersburg</button>
+            <button class="port-btn" type="button" data-port="juneau" aria-pressed="false">Juneau</button>
+            <button class="port-btn" type="button" data-port="home" aria-pressed="false">Channel home</button>
+            <button class="drift" id="drift" type="button" aria-pressed="false">Run north</button>
+          </div>
+          <article class="port-card">
+            <p class="kicker" id="port-kicker">Home port</p>
+            <h3 id="port-title">Ketchikan</h3>
+            <p id="port-text">
+              Rain on the roof and a creek under the floor. The banjo lives here, on a porch above the harbor. When the cruise ships leave, the town gets its voice back.
+            </p>
+            <a id="port-link" href="https://www.visitktn.com/plan/places-to-discover/creek-street/" target="_blank" rel="noopener noreferrer">Walk Creek Street</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="band porch" id="porch">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="kicker">No. 03 — Open G</p>
+            <h2>Sit in.</h2>
+            <p class="deck">
+              Five strings, the way a banjo wakes up. Pluck one, strike a chord, or throw a forward roll. If a song is already going, play along.
+            </p>
+          </header>
+          <div class="neck" role="group" aria-label="Banjo strings in open G">
+            <button class="string" type="button" data-midi="50" data-key="1" style="--gauge: 3px">
+              <span class="string-name">D</span>
+              <span class="string-line"></span>
+              <span class="string-key">1</span>
+            </button>
+            <button class="string" type="button" data-midi="55" data-key="2" style="--gauge: 2.5px">
+              <span class="string-name">G</span>
+              <span class="string-line"></span>
+              <span class="string-key">2</span>
+            </button>
+            <button class="string" type="button" data-midi="59" data-key="3" style="--gauge: 2px">
+              <span class="string-name">B</span>
+              <span class="string-line"></span>
+              <span class="string-key">3</span>
+            </button>
+            <button class="string" type="button" data-midi="62" data-key="4" style="--gauge: 1.5px">
+              <span class="string-name">D</span>
+              <span class="string-line"></span>
+              <span class="string-key">4</span>
+            </button>
+            <button class="string" type="button" data-midi="67" data-key="5" style="--gauge: 1.25px">
+              <span class="string-name">g</span>
+              <span class="string-line"></span>
+              <span class="string-key">5</span>
+            </button>
+          </div>
+          <div class="chords">
+            <button class="chord" type="button" data-chord="g">G</button>
+            <button class="chord" type="button" data-chord="c">C</button>
+            <button class="chord" type="button" data-chord="d">D</button>
+            <button class="chord" type="button" data-chord="e">Em</button>
+            <button class="chord" type="button" data-chord="a">A</button>
+            <button class="chord chord-roll" id="roll" type="button">Forward roll</button>
+          </div>
+          <p class="key-hint">
+            Keys <kbd>1</kbd>–<kbd>5</kbd> pluck from low to high. <kbd>G</kbd> <kbd>C</kbd> <kbd>D</kbd> <kbd>E</kbd> <kbd>A</kbd> strum. <kbd>F</kbd> rolls. Space plays the record.
+          </p>
+        </div>
+      </section>
+
+      <section class="band about" id="about">
+        <div class="wrap about-grid">
+          <div>
+            <p class="kicker">No. 04 — The player</p>
+            <h2>A narrow town. A wide song.</h2>
+            <div class="about-copy">
+              <p>
+                Eli Roundy plays bluegrass and country from Ketchikan, Alaska — a narrow town on Revillagigedo Island, stacked between the Tongass and the tide. People call it the First City. They also call the rain liquid sunshine, which is optimistic, and not wrong.
+              </p>
+              <p>
+                The songs are string-band music with salt in the tuning pegs.
+                <a href="https://www.visitktn.com/plan/places-to-discover/creek-street/" target="_blank" rel="noopener noreferrer">Creek Street</a>
+                is a boardwalk on pilings; the water underneath keeps time better than a metronome. In summer the cruise ships fill the channel. In winter the porch is the venue. Deer Mountain stands behind town, and the fleet still goes out.
+              </p>
+              <p>
+                Ketchikan is the homeland of the Taant'a Kwáan Tlingit. This is a newcomer's porch music, played with respect for a shoreline that was already full of songs.
+              </p>
+              <p>
+                He plays guitar, banjo, and a fiddle that only behaves in damp weather. <em>Wet Strings</em> is the porch record: six tunes about weather, work, and the long way home along the Inside Passage. On a soaked afternoon the town has
+                <a href="https://www.krbd.org/" target="_blank" rel="noopener noreferrer">KRBD</a>.
+                Hit play here and the band tunes up in the browser. Bring a coat anyway.
+              </p>
+            </div>
+          </div>
+          <dl class="notes">
+            <div>
+              <dt>Based</dt>
+              <dd>Ketchikan, Alaska</dd>
+            </div>
+            <div>
+              <dt>Plays</dt>
+              <dd>Guitar, banjo, fiddle</dd>
+            </div>
+            <div>
+              <dt>Tunes</dt>
+              <dd>Open G, then whatever the room needs</dd>
+            </div>
+            <div>
+              <dt>Weather</dt>
+              <dd>Bring a coat. Then bring another.</dd>
+            </div>
+          </dl>
+          <figure class="pull">
+            <blockquote>The grass is blue. So is the rain.</blockquote>
+            <figcaption>A tuning note, from the porch</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="band shows" id="shows">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="kicker">No. 05 — The poster</p>
+            <h2>On the route.</h2>
+            <p class="deck">
+              From Creek Street up to Juneau for folk week, then south when the weather allows. Tap a ticket to ask after a chair.
+            </p>
+          </header>
+          <div class="tickets">
+            <button class="ticket" type="button" data-venue="New York Café" data-place="Ketchikan, Alaska" data-when="2026-10-24">
+              <span class="ticket-date"><span>Sat</span><strong>Oct 24</strong><span>2026</span></span>
+              <span class="ticket-body">
+                <span class="ticket-venue">New York Café</span>
+                <span class="ticket-where">Ketchikan, Alaska</span>
+                <span class="ticket-note">Porch set · 8:00</span>
+              </span>
+              <span class="ticket-stub">Admit one</span>
+            </button>
+            <button class="ticket" type="button" data-venue="Backdoor Café" data-place="Sitka, Alaska" data-when="2026-11-14">
+              <span class="ticket-date"><span>Sat</span><strong>Nov 14</strong><span>2026</span></span>
+              <span class="ticket-body">
+                <span class="ticket-venue">Backdoor Café</span>
+                <span class="ticket-where">Sitka, Alaska</span>
+                <span class="ticket-note">Listening room · 7:30</span>
+              </span>
+              <span class="ticket-stub">Admit one</span>
+            </button>
+            <button class="ticket is-full" type="button" data-full="true" data-venue="The Alaskan Hotel" data-place="Juneau, Alaska" data-when="2026-12-05">
+              <span class="ticket-date"><span>Sat</span><strong>Dec 5</strong><span>2026</span></span>
+              <span class="ticket-body">
+                <span class="ticket-venue">The Alaskan Hotel</span>
+                <span class="ticket-where">Juneau, Alaska</span>
+                <span class="ticket-note">Late set · 9:00</span>
+              </span>
+              <span class="ticket-stub">Full</span>
+            </button>
+            <button class="ticket" type="button" data-venue="Tractor Tavern" data-place="Seattle, Washington" data-when="2027-01-16">
+              <span class="ticket-date"><span>Sat</span><strong>Jan 16</strong><span>2027</span></span>
+              <span class="ticket-body">
+                <span class="ticket-venue">Tractor Tavern</span>
+                <span class="ticket-where">Seattle, Washington</span>
+                <span class="ticket-note">Down the coast · 8:00</span>
+              </span>
+              <span class="ticket-stub">Admit one</span>
+            </button>
+            <button class="ticket" type="button" data-venue="Laurelthirst Public House" data-place="Portland, Oregon" data-when="2027-02-06">
+              <span class="ticket-date"><span>Sat</span><strong>Feb 6</strong><span>2027</span></span>
+              <span class="ticket-body">
+                <span class="ticket-venue">Laurelthirst</span>
+                <span class="ticket-where">Portland, Oregon</span>
+                <span class="ticket-note">Bluegrass room · 8:00</span>
+              </span>
+              <span class="ticket-stub">Admit one</span>
+            </button>
+            <button class="ticket" type="button" data-venue="Centennial Hall" data-place="Juneau, Alaska" data-when="2027-04-09">
+              <span class="ticket-date"><span>Fri</span><strong>Apr 9</strong><span>2027</span></span>
+              <span class="ticket-body">
+                <span class="ticket-venue">Centennial Hall</span>
+                <span class="ticket-where">Juneau, Alaska</span>
+                <span class="ticket-note">Folk Festival week</span>
+              </span>
+              <span class="ticket-stub">Sit in</span>
+            </button>
+          </div>
+          <p class="fine-print">
+            Poster dates for the site — ink in confirmed bookings before anyone buys a ferry ticket. Folk week in Juneau runs
+            <a href="https://akfolkfest.org/" target="_blank" rel="noopener noreferrer">April 5–11, 2027</a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="band booking" id="booking">
+        <div class="wrap booking-grid">
+          <header class="section-head">
+            <p class="kicker">No. 06 — The note</p>
+            <h2>Write from wherever you're dry.</h2>
+            <p class="deck">
+              Shows, kitchens, dances, a radio hour. Say when and where. The note stays on this page until a real mailbox is wired up — copy it and send it on.
+            </p>
+          </header>
+          <form id="booking-form" novalidate>
+            <label>
+              <span>Name</span>
+              <input name="name" type="text" autocomplete="name" required aria-describedby="err-name" />
+              <small id="err-name" data-error="name"></small>
+            </label>
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" autocomplete="email" required aria-describedby="err-email" />
+              <small id="err-email" data-error="email"></small>
+            </label>
+            <label>
+              <span>Occasion</span>
+              <select name="occasion" required aria-describedby="err-occasion">
+                <option value="">Choose one</option>
+                <option value="show">A show</option>
+                <option value="kitchen">A wedding or a kitchen</option>
+                <option value="dance">A dance</option>
+                <option value="radio">A radio session</option>
+                <option value="else">Something else</option>
+              </select>
+              <small id="err-occasion" data-error="occasion"></small>
+            </label>
+            <label>
+              <span>Date, if you have one</span>
+              <input name="when" type="date" />
+            </label>
+            <label class="wide">
+              <span>Note</span>
+              <textarea name="message" rows="4" required aria-describedby="err-message"></textarea>
+              <small id="err-message" data-error="message"></small>
+            </label>
+            <button class="btn btn-brass" type="submit">Leave it on the porch</button>
+          </form>
+          <article class="postcard" id="postcard" hidden>
+            <div class="seal" aria-hidden="true">ER</div>
+            <p class="kicker">Held on this porch</p>
+            <h3>No courier on the creek just yet.</h3>
+            <p>Copy the note and send it once you've got his ear. Nothing left this browser.</p>
+            <p class="pc-line"><span>From</span> <strong id="pc-from"></strong></p>
+            <p class="pc-line"><span>Email</span> <strong id="pc-email"></strong></p>
+            <p class="pc-line"><span>Occasion</span> <strong id="pc-occasion"></strong></p>
+            <p class="pc-line"><span>When</span> <strong id="pc-when"></strong></p>
+            <blockquote id="pc-message"></blockquote>
+            <div class="postcard-actions">
+              <button class="btn btn-ink" id="copy-note" type="button">Copy the note</button>
+              <button class="btn btn-ghost" id="write-another" type="button">Write another</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div>
+          <p class="brand-lockup">Eli Roundy</p>
+          <p>Porch sessions from Ketchikan, Alaska. Bluegrass, country, and weather.</p>
+        </div>
+        <p>55.34°N · 131.65°W<br />Revillagigedo Island</p>
+        <p>© 2026 Roundy<br />Wet Strings · RR-001</p>
+      </div>
+    </footer>
+
+    <div class="dock" role="region" aria-label="Porch player">
+      <div class="dock-progress">
+        <label class="visually-hidden" for="scrub">Seek through the song</label>
+        <input id="scrub" type="range" min="0" max="1000" value="0" step="1" />
+      </div>
+      <div class="dock-main">
+        <div class="dock-id">
+          <span class="dock-dot" id="dock-dot" aria-hidden="true"></span>
+          <div>
+            <p class="dock-title" id="dock-title">Creek Street Rain</p>
+            <p class="dock-sub" id="dock-sub">The boardwalk keeps the beat. The creek plays the rest.</p>
+          </div>
+        </div>
+        <div class="viz" id="viz" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="dock-controls">
+          <button id="prev" type="button" aria-label="Previous song">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2h2v12H4zM13 2.5v11L6 8z" fill="currentColor" /></svg>
+          </button>
+          <button id="play" type="button" aria-label="Play">
+            <svg class="when-paused" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l10-5.5z" fill="currentColor" /></svg>
+            <svg class="when-playing" viewBox="0 0 16 16" hidden aria-hidden="true"><path d="M4 2h3v12H4zM9 2h3v12H9z" fill="currentColor" /></svg>
+          </button>
+          <button id="next" type="button" aria-label="Next song">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 2h2v12h-2zM3 2.5v11L10 8z" fill="currentColor" /></svg>
+          </button>
+          <button id="loop" type="button" aria-pressed="true" aria-label="Loop the song">Loop</button>
+        </div>
+        <p class="dock-time">
+          <span id="time-now">0:00</span>
+          <span aria-hidden="true">/</span>
+          <span id="time-dur">0:00</span>
+        </p>
+        <label class="volume">
+          <span class="visually-hidden">Volume</span>
+          <input id="volume" type="range" min="0" max="100" value="82" />
+        </label>
+      </div>
+    </div>
+    <p class="visually-hidden" id="player-status" aria-live="polite"></p>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
